@@ -3,13 +3,31 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
+    "dev": "node form.js && astro dev",
+    "start": "node form.js && astro dev",
+    "build": "node form.js && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^2.10.7"
+    "@astrojs/mdx": "^0.19.7",
+    "@astrojs/react": "^2.2.1",
+    "@astrojs/tailwind": "^4.0.0",
+    "@astropub/md": "^0.2.0",
+    "@types/marked": "^5.0.1",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "astro": "^2.10.7",
+    "astro-icon": "^0.8.1",
+    "astro-remote": "^0.2.4",
+    "marked": "^7.0.2",
+    "papercss": "^1.9.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-google-forms-hooks": "^1.2.4",
+    "react-inlinesvg": "^4.0.2",
+    "react-svg": "^16.1.21",
+    "tailwind-merge": "^1.14.0",
+    "tailwindcss": "^3.0.24"
   }
 }

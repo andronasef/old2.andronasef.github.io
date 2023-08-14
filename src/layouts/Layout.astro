@@ -1,39 +1,38 @@
---- 
+---
+import Header from "../components/common/Header.astro";
+import Footer from "../components/common/Footer";
+import "../styles/global.css";
+import "papercss/dist/paper.min.css";
+import Backtotop from "../components/common/Backtotop";
 interface Props {
-	title: string;
+  title: string;
 }
-
-const { title } = Astro.props;
+// @ts-ignore
+const { title } = Astro.props.frontmatter || Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/external-svg-loader@latest/svg-loader.min.js"
+      async></script>
+  </head>
+  <body
+    class="flex flex-col items-center w-screen min-h-screen overflow-x-hidden"
+  >
+    <Header />
+    <main class="flex-grow">
+      <!-- <Backtotop /> -->
+      <slot />
+    </main>
+    <Footer />
+  </body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151A;
-		background-size: 224px;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
-</style>

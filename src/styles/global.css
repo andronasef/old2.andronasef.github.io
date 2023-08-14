@@ -1,0 +1,28 @@
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+img {
+  user-select: none;
+  border: 0;
+}
+
+Button {
+  padding: 2rem;
+}
+
+nav div {
+  margin: 0 !important;
+}
+
+/* Making All Icons Match the Main Color */
+.icon {
+  filter: invert(20%) sepia(8%) saturate(230%) hue-rotate(2deg) brightness(93%)
+    contrast(79%);
+}
+
+/* Making Footer Icons White */
+footer div img {
+  filter: invert(100%) !important;
+}

@@ -1,0 +1,19 @@
+---
+import Layout from "../../layouts/Layout.astro";
+const allProjects = (await Astro.glob("./*.mdx")).sort((a, b) =>
+  a.frontmatter.id < b.frontmatter.id ? -1 : 1
+);
+import ProjectList from "../../components/common/ProjectsList";
+import Container from "../../components/common/Container";
+---
+
+<Layout title={"My Projects"}>
+  <Container>
+    <div class="py-12 gap-5 flex flex-col">
+      <h2 class="text-3xl text-center">My Projects</h2>
+      <ul>
+        <ProjectList projects={[...allProjects]} />
+      </ul>
+    </div>
+  </Container>
+</Layout>
