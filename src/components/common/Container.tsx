@@ -10,7 +10,7 @@ function Container({
   return (
     <div
       className={twMerge(
-        "container flex flex-col gap-10 px-5 md:px-10",
+        "flex flex-col gap-10 px-5 md:px-10 max-w-7xl w-full",
         className
       )}
     >

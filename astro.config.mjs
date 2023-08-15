@@ -12,5 +12,11 @@ export default defineConfig({
     assets: true,
     viewTransitions: true,
   },
-  integrations: [tailwind(), react(), mdx()],
+  integrations: [
+    tailwind({
+      applyBaseStyles: false,
+    }),
+    react(),
+    mdx(),
+  ],
 });

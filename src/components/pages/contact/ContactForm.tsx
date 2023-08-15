@@ -20,11 +20,11 @@ const ContactForm = () => {
       method="post"
       target="form"
       id="work-form"
-      className="flex flex-col gap-2 md:max-w-xs"
+      className="flex flex-col gap-2 md:max-w-xs form-group"
     >
-      <iframe className="hidden visibility:" title="form" name="form" />
+      <iframe className="hidden" title="form" name="form" />
       {fields.map((field, index) => (
-        <div key={index} className="flex flex-col gap-2">
+        <div key={index} className="flex flex-col gap-2 form-group">
           <label>
             <span className="text-sm">{field.label}</span>
           </label>

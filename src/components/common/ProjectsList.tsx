@@ -31,11 +31,13 @@ function Project({
 
       <div className="flex flex-row items-center justify-between card-body">
         <div className="text-left">
-          <h4 className="card-title">{title}</h4>
-          <p className="pr-2 card-text line-clamp-2">{description} </p>
+          <h4 className="text-lg line-clamp-1">{title}</h4>
+          <p className="pr-2 text-xs md:text-base line-clamp-1">
+            {description}{" "}
+          </p>
         </div>
-        <a className="bg-none" href={link}>
-          <Icon className="w-8" src="/assets/go-to-project.svg" />
+        <a className="bg-none min-w-fit p-1" href={link}>
+          <Icon className="w-7 md:w-8" src="/assets/go-to-project.svg" />
         </a>
       </div>
     </div>
