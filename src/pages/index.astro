@@ -13,20 +13,18 @@ const allProjects = (await Astro.glob("./projects/*.mdx")).sort((a, b) =>
 ---
 
 <Layout title="Andrew Nasef | Fullstack Developer">
-  <main>
-    <Hero />
-    <Container>
-      <WhyMe />
-      <HowItWorks />
-      <div class="flex flex-col gap-8 text-center">
-        <div class="flex flex-col gap-2">
-          <p class="text-2xl font-bold">My Portfolio</p>
-          <p class="text-sm">Projects that I am proud to worked on.</p>
-        </div>
-        <ProjectsList projects={[...allProjects]} />
-        <Button link="/projects">More Projects</Button>
+  <Hero />
+  <Container>
+    <WhyMe />
+    <HowItWorks />
+    <div class="flex flex-col gap-8 text-center">
+      <div class="flex flex-col gap-2">
+        <p class="text-2xl font-bold">My Portfolio</p>
+        <p class="text-sm">Projects that I am proud to worked on.</p>
       </div>
-    </Container>
-    <CTA />
-  </main>
+      <ProjectsList projects={[...allProjects]} />
+      <Button link="/projects">More Projects</Button>
+    </div>
+  </Container>
+  <CTA />
 </Layout>

@@ -2,7 +2,7 @@ import Button from "../../common/Button";
 
 function CTA() {
   return (
-    <div className="text-center center min-h-[300px] p-10 py-[50px] bg-[var(--primary)]  text-white mt-10">
+    <div className="text-center center min-h-[300px] p-10 py-[50px] bg-[var(--primary)]  text-white mt-10 w-full">
       <div className="flex-col gap-5 center md:max-w-lg">
         <p className="text-2xl font-bold">
           Have Projects in Your Mind? <br /> Let’s Work Together

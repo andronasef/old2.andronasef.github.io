@@ -26,14 +26,12 @@ const { title } = Astro.props.frontmatter || Astro.props;
       src="https://unpkg.com/external-svg-loader@latest/svg-loader.min.js"
       async></script>
   </head>
-  <body
-    class="flex flex-col items-center w-screen min-h-screen overflow-x-hidden"
-  >
+  <body class="w-screen min-h-screen overflow-x-hidden center">
     <Header />
-    <main class="flex-grow">
+    <main class="flex-grow center">
       <!-- <Backtotop /> -->
       <slot />
     </main>
     <Footer />
   </body>
-</html>../components/common/Header
+</html>
