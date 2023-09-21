@@ -1,27 +1,31 @@
+import { useTranslation } from "react-i18next";
 import Button from "../../common/Button";
 
 function HowItWorks() {
+  const { t } = useTranslation();
   return (
     <div className="grid items-center justify-center grid-cols-1 gap-5 text-left md:grid-cols-2 justify-items-center ">
-      <img className="border-0 w-96" src="assets/how-it-works.png" alt="" />
+      <img className="border-0 w-96" src="/assets/how-it-works.png" alt="" />
       <div className="flex flex-col items-center gap-3 md:items-start">
-        <p className="text-2xl font-bold">How it works?</p>
+        <p className="text-2xl font-bold">
+          {t("pages.homepage.components.howitworks.title")}
+        </p>
         <div className="flex flex-col gap-2 ">
           <Step
             number={1}
-            title="Get in touch and share project specifics with me."
+            title={t("pages.homepage.components.howitworks.step1")}
           />
           <Step
             number={2}
-            title="We'll collaborate to plan the project effectively."
+            title={t("pages.homepage.components.howitworks.step2")}
           />
           <Step
             number={3}
-            title="Sit back as I bring your project to life seamlessly. "
+            title={t("pages.homepage.components.howitworks.step3")}
           />
         </div>
         <Button link="/contact" style="self-start p-2">
-          Let’s Work Together!
+          {t("pages.homepage.components.howitworks.button")}
         </Button>
       </div>
     </div>

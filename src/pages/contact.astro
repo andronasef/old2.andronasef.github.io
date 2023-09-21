@@ -3,6 +3,11 @@ import Layout from "../layouts/Layout.astro";
 import SocialLinks from "../components/common/SocialLinks";
 import Container from "../components/common/Container";
 import ContactForm from "../components/pages/contact/ContactForm";
+import { getLocale } from "astro-i18n-aut";
+
+const locale = getLocale(Astro.url);
+
+import i18n from "@src/i18n";
 ---
 
 <Layout title="Contact Me">
@@ -15,24 +20,25 @@ import ContactForm from "../components/pages/contact/ContactForm";
           alt="me"
         />
       </div>
-      <h2 class="text-3xl font-bold">Andrew Nasef</h2>
+      <h2 class="text-3xl font-bold">
+        {i18n.t("pages.contact.components.profiles.my_name")}
+      </h2>
       <p class="-mt-1 text-base font-semibold">
-        Fullstack Freelancer Developer
+        {i18n.t("pages.contact.components.profiles.subtitle")}
       </p>
       <SocialLinks />
     </div>
     <div class="flex flex-col gap-2">
-      <div class="text-center md:text-left">
+      <div class="text-center ltr:md:text-left rtl:md:text-right">
         <p class="text-xl font-semibold md:text-2xl">
-          NEED A FULL STACK <br class="md:hidden" /> WEB DEVELOPER?
+          {i18n.t("pages.contact.components.contact_form.title")}
         </p>
         <p>
-          I'm ready to hear about your project. Don't hesitate to get in touch
-          with me using the contact form.
+          {i18n.t("pages.contact.components.contact_form.subtitle")}
         </p>
       </div>
       <div class="px-2 overflow-hidden">
-        <ContactForm client:load />
+        <ContactForm lang={locale} client:load />
       </div>
     </div>
   </Container>

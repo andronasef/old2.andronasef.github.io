@@ -1,19 +1,26 @@
-import Button from "./Button";
+import { defaultLocale } from "astro-i18n-aut";
 import Icon from "./Icon";
+import A from "./A";
 
 function ProjectsList({ projects }: { projects: any }) {
   return (
     <div className="flex flex-col items-center justify-center gap-5 text-center">
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
-        {projects.map((project: any) => (
-          <Project
-            key={project.link}
-            link={project.url}
-            description={project.frontmatter.description}
-            title={project.frontmatter.title}
-            img={project.frontmatter.img}
-          />
-        ))}
+        {projects.map((project: any) => {
+          const [lang, slug] = project.slug.split("/");
+
+          let link = `/projects/${slug}`;
+
+          return (
+            <Project
+              key={project.slug}
+              link={link}
+              description={project.data.description}
+              title={project.data.title}
+              img={project.data.img}
+            />
+          );
+        })}
       </div>
     </div>
   );
@@ -28,17 +35,19 @@ function Project({
   return (
     <div className="card">
       <img className="object-cover aspect-video" src={img} alt={title} />
-
       <div className="flex flex-row items-center justify-between card-body">
-        <div className="text-left">
+        <div className="ltr:text-left rtl:text-right">
           <h4 className="text-lg line-clamp-1">{title}</h4>
           <p className="pr-2 text-xs md:text-base line-clamp-1">
-            {description}{" "}
+            {description}
           </p>
         </div>
-        <a className="bg-none min-w-fit p-1" href={link}>
-          <Icon className="w-7 md:w-8" src="/assets/go-to-project.svg" />
-        </a>
+        <A className="bg-none min-w-fit p-1" href={link}>
+          <Icon
+            className="w-7 md:w-8 rtl:-scale-100"
+            src="/assets/go-to-project.svg"
+          />
+        </A>
       </div>
     </div>
   );

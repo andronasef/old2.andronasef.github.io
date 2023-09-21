@@ -1,0 +1,53 @@
+---
+import { type CollectionEntry, getCollection, getEntry } from "astro:content";
+// import BlogItem from "@layouts/BlogItem.astro";
+import { defaultLocale, getLocale } from "astro-i18n-aut";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/common/Container";
+import CTA from "@components/common/CTA";
+export async function getStaticPaths() {
+  const projects = await getCollection("projects", (entry) =>
+    entry.slug.startsWith(defaultLocale + "/"),
+  );
+  return projects.map((project) => ({
+    params: { slug: project.slug.replace(`${defaultLocale}/`, "") },
+  }));
+}
+
+type Props = CollectionEntry<"projects">;
+
+const { slug } = Astro.params;
+const locale = getLocale(Astro.url) ?? defaultLocale;
+
+const project = await getEntry({
+  collection: "projects",
+  slug: locale + "/" + slug,
+});
+
+if (!project) {
+  return new Response(null, {
+    status: 404,
+    statusText: "Not found",
+  });
+}
+const { Content } = await project.render();
+---
+
+<Layout title={project.data.title}>
+  <Container className="max-w-2xl">
+    <div class="flex flex-col gap-3 py-12 md:[&>img]:max-w-lg">
+      <h1 class="text-2xl font-bold">{project.data.title}</h1>
+      <img src={project.data.img} alt=" " />
+      <div class="flex flex-col gap-4">
+        <Content />
+      </div>
+    </div>
+  </Container>
+  <CTA />
+</Layout>
+
+<style>
+  img {
+    max-width: 400px;
+  }
+</style>

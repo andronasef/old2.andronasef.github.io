@@ -1,18 +1,22 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-const allProjects = (await Astro.glob("./*.mdx")).sort((a, b) =>
-  a.frontmatter.id < b.frontmatter.id ? -1 : 1
-);
-import ProjectList from "../../components/common/ProjectsList";
-import Container from "../../components/common/Container";
+import ProjectList from "@components/common/ProjectsList";
+import Container from "@components/common/Container";
+import { getAllProjects } from "@src/utils/project";
+import { getLocale } from "astro-i18n-aut";
+import i18n from "@src/i18n";
+
+const lang = getLocale(Astro.url);
+
+const allProjects = await getAllProjects(lang);
 ---
 
-<Layout title={"My Projects"}>
+<Layout title={i18n.t("pages.projects.title")}>
   <Container>
     <div class="py-12 gap-5 flex flex-col">
-      <h2 class="text-3xl text-center">My Projects</h2>
+      <h2 class="text-3xl text-center">{i18n.t("pages.projects.title")}</h2>
       <ul>
-        <ProjectList projects={[...allProjects]} />
+        <ProjectList projects={allProjects} />
       </ul>
     </div>
   </Container>

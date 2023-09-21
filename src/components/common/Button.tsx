@@ -1,22 +1,26 @@
 import { twMerge } from "tailwind-merge";
+import A from "./A";
 
 function Button({
   children,
   action,
-  style,
+  className,
   link,
 }: {
   action?: () => void;
-  style?: string;
+  className?: string;
   children: string;
-  link?: string;
+  link?: string | undefined;
 }) {
   return (
-    <a className="bg-none" href={link}>
-      <button className={twMerge("p-2", style)} onClick={action}>
+    <A className="bg-none" href={link}>
+      <button
+        className={twMerge("p-2 font-semibold", className)}
+        onClick={action}
+      >
         {children}
       </button>
-    </a>
+    </A>
   );
 }
 export default Button;

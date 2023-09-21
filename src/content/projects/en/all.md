@@ -1,9 +1,8 @@
 ---
 title: All Projects
-layout: ../../layouts/ProjectLayout.astro
 description: All my diffrent projects on one page
 img: /assets/projects/all.jpg
-id: 9999
+id: -1
 ---
 
 ## 💻 Frontend Projects
@@ -53,3 +52,12 @@ id: 9999
 [Product Hunt Twitter Bot 🐦 - Get the best ⭐️ from ProductHunt 🕵 in Twitter](https://github.com/andronasef/producthuntbot)
 
 [Is This Even Real? 🤥 - You are the detective in this game = You must detect fake images](https://andronasef.github.io/is-this-even-real-game)
+
+<style >
+  h2 {
+    margin-top: 1.5rem;
+    font-size: 1.5rem !important;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+</style>

@@ -1,0 +1,85 @@
+{
+  "components": {
+    "header": {
+      "title": "Andrew Nasef",
+      "menu": {
+        "home": "Home",
+        "projects": "Projects",
+        "contact": "Contact"
+      }
+    },
+    "cta": {
+      "title": "Have Projects in Your Mind? Let’s Work Together!",
+      "description": "Ready to see your projects come alive? Let's team up and turn your ideas into reality. Reach out now, and let's get started on crafting something remarkable together.",
+      "button": "Let’s Start Your Project!"
+    },
+    "footer": {
+      "copyright": "All rights reserved"
+    }
+  },
+  "pages": {
+    "homepage": {
+      "title": "Andrew Nasef | WordPress Developer",
+      "description": "",
+      "components": {
+        "hero": {
+          "title": "A Dedicated Developer for your ",
+          "end_title": "Business",
+          "subtitle": "Hire a skilled full stack developer to boost sales and cut costs by optimizing your digital platforms.",
+          "button": "Let’s Work Together!"
+        },
+        "whyme": {
+          "title": "Why Choose Me?!",
+          "reason1": {
+            "title": "Predictable Pricing",
+            "description": "No surprises here! Choose a plan that works for you and pay the same amount every month.          "
+          },
+          "reason2": {
+            "title": "Fast Turnaround",
+            "description": "Don't waste time searching for an agency or the right freelancer. Get work done in days, not in weeks."
+          },
+          "reason3": {
+            "title": "Dependable & Flexible",
+            "description": "No surprises here! Choose a plan that works for you and pay the same amount every month."
+          }
+        },
+        "howitworks": {
+          "title": "How it works?",
+          "step1": "Get in touch and share project specifics with me.",
+          "step2": "We'll collaborate to plan the project effectively.",
+          "step3": "Sit back as I bring your project to life seamlessly.",
+          "button": "Let’s Work Together!"
+        },
+        "portfolio": {
+          "title": "My Portfolio",
+          "subtitle": "The Projects that I am proud to worked on.",
+          "button": "More Projects"
+        }
+      }
+    },
+    "contact": {
+      "components": {
+        "profiles": {
+          "my_name": "Andrew Nasef",
+          "subtitle": "WordPress Freelancer Developer"
+        },
+        "contact_form": {
+          "title": "NEED A Wordpress DEVELOPER?",
+          "subtitle": "I'm ready to hear about your project. Don't hesitate to get in touch with me using the contact form.\n",
+          "button": "Let's Do It!"
+        }
+      },
+      "profiles": {
+        "my_name": "Andrew Nasef",
+        "subtitle": "All Projects"
+      }
+    },
+    "projects": {
+      "title": "My Projects"
+    },
+    "allProjects": {
+      "title": "All Projects",
+      "subtitle": "All my different projects on one page."
+    }
+  }
+}

@@ -3,24 +3,35 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "node form.js && astro dev",
+    "dev": " astro dev",
     "build": "node form.js && astro build",
     "preview": "node form.js && astro build && astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^0.19.7",
-    "@astrojs/react": "^2.2.1",
+    "@astrojs/mdx": "^1.1.0",
+    "@astrojs/react": "^3.0.2",
     "@astrojs/sitemap": "^3.0.0",
-    "@astrojs/tailwind": "^4.0.0",
+    "@astrojs/tailwind": "^5.0.0",
+    "@fontsource/neucha": "^5.0.8",
+    "@fontsource/tajawal": "^5.0.8",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
-    "astro": "^2.10.7",
+    "astro": "^3.1.1",
+    "astro-i18n-aut": "^0.4.23",
+    "i18next": "^23.5.1",
+    "marked": "^9.0.3",
     "papercss": "^1.9.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-google-forms-hooks": "^1.2.4",
+    "react-i18next": "^13.2.2",
     "tailwind-merge": "^1.14.0",
-    "tailwindcss": "^3.0.24"
+    "tailwindcss": "^3.0.24",
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.3",
+    "prettier-plugin-astro": "^0.12.0"
   }
 }

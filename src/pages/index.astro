@@ -1,30 +1,31 @@
 ---
-import CTA from "../components/pages/home/CTA";
-import Hero from "../components/pages/home/Hero";
-import HowItWorks from "../components/pages/home/HowItWorks";
-import ProjectsList from "../components/common/ProjectsList";
-import WhyMe from "../components/pages/home/WhyMe";
-import Layout from "../layouts/Layout.astro";
-import Button from "../components/common/Button";
-import Container from "../components/common/Container";
-const allProjects = (await Astro.glob("./projects/*.mdx")).sort((a, b) =>
-  a.frontmatter.id < b.frontmatter.id ? -1 : 1
-);
+import CTA from "@components/common/CTA";
+import Hero from "@components/pages/home/Hero";
+import HowItWorks from "@components/pages/home/HowItWorks";
+import ProjectsList from "@components/common/ProjectsList";
+import WhyMe from "@components/pages/home/WhyMe";
+import Layout from "@layouts/Layout.astro";
+import Button from "@components/common/Button";
+import Container from "@components/common/Container";
+import LanguageChanger from "@components/common/LanguageChanger";
+import { getLatestFourProjects } from "@utils/project";
+
+const lang = getLocale(Astro.url);
+const latestFourProjects = await getLatestFourProjects(lang);
+
+import i18n from "../i18n";
+import { getLocale } from "astro-i18n-aut";
+import Portfolio from "@components/pages/home/Portfolio";
 ---
 
-<Layout title="Andrew Nasef | Fullstack Developer">
+<Layout title={i18n.t("pages.homepage.title")}>
   <Hero />
   <Container>
     <WhyMe />
     <HowItWorks />
-    <div class="flex flex-col gap-8 text-center">
-      <div class="flex flex-col gap-2">
-        <p class="text-2xl font-bold">My Portfolio</p>
-        <p class="text-sm">Projects that I am proud to worked on.</p>
-      </div>
-      <ProjectsList projects={[...allProjects]} />
-      <Button link="/projects">More Projects</Button>
-    </div>
+    <Portfolio>
+      <ProjectsList projects={latestFourProjects} />
+    </Portfolio>
   </Container>
   <CTA />
 </Layout>

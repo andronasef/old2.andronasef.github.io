@@ -1,25 +1,28 @@
+import { useTranslation } from "react-i18next";
 import Button from "../../common/Button";
 import Icon from "../../common/Icon";
 
 function Hero() {
+  const { t } = useTranslation();
   return (
     <div className="h-[calc(100dvh-70px)] w-screen flex relative flex-col justify-center items-center [&>img]:absolute [&>img]:border-0">
       <div className="md:max-w-lg p-[15%] md:p-5 flex flex-col items-center justify-center gap-6 [&>*]:text-center mb-20">
-        <p className="relative text-3xl md:text-4xl">
-          A Dedicated Developer <br /> for your{" "}
+        <p className="relative font-bold text-3xl md:text-4xl">
+          {t("pages.homepage.components.hero.title")}
           <span className="relative underline">
-            Business
+            {t("pages.homepage.components.hero.end_title")}
             <Icon
               src="/assets/click-icon.svg?raw"
-              className="absolute border-0 w-8 md:w-10 top-[60%] -right-[40%]"
+              className="absolute border-0 w-8 md:w-10 top-[60%] rtl:-left-[50%] rtl:scale-x-[-1] ltr:-right-[40%]"
             />
           </span>
         </p>
         <p className="text-md">
-          Hire a skilled full stack developer to boost sales and cut costs by
-          optimizing your digital platforms.
+          {t("pages.homepage.components.hero.subtitle")}
         </p>
-        <Button link="/contact">Let’s Work Together! </Button>
+        <Button link="/contact">
+          {t("pages.homepage.components.hero.button")}
+        </Button>
       </div>
       <Icon
         className="absolute w-8 top-[10%] md:top-[25%] left-[5%]"

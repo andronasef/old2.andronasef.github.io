@@ -1,0 +1,41 @@
+import Container from "./Container";
+import Icon from "./Icon";
+import { useTranslation } from "react-i18next";
+import A from "./A";
+
+function Header() {
+  const { t } = useTranslation();
+  return (
+    <>
+      <Container>
+        <nav
+          className="flex items-center justify-between px-3 mt-5 border"
+          id="header"
+        >
+          <A href="/" className="border-0 hover:border-0">
+            <h1 className="text-xl font-semibold md:text-2xl">
+              {t("components.header.title")}
+            </h1>
+          </A>
+          <div className="flex flex-row gap-3">
+            <div className="flex gap-3 md:hidden">
+              <A href="/projects">
+                <Icon className="w-5 md:w-8" src="/assets/projects-icon.svg" />
+              </A>
+              <A href="/contact">
+                <Icon className="w-5 md:w-8" src="/assets/contact-icon.svg" />
+              </A>
+            </div>
+            <div className="hidden gap-3 md:flex">
+              <A href="/">{t("components.header.menu.home")}</A>
+              <A href="/projects">{t("components.header.menu.projects")}</A>
+              <A href="/contact">{t("components.header.menu.contact")}</A>
+            </div>
+            <div></div>
+          </div>
+        </nav>
+      </Container>
+    </>
+  );
+}
+export default Header;

@@ -1,18 +1,29 @@
 ---
-import Header from "../components/common/Header";
+// import Header from "../components/common/Header.tsx.bak";
+import Header from "@components/common/Header.astro";
 import Footer from "../components/common/Footer";
-import "../styles/global.css";
-import "papercss/dist/paper.min.css";
+import LanguageChanger from "@components/common/LanguageChanger.astro";
 import Backtotop from "../components/common/Backtotop";
+import { getLocale } from "astro-i18n-aut";
+import "papercss/dist/paper.min.css";
+import "../styles/global.css";
+import "@fontsource/tajawal";
+import "@fontsource/neucha";
+
 interface Props {
   title: string;
 }
 // @ts-ignore
 const { title } = Astro.props.frontmatter || Astro.props;
+
+const locale = getLocale(Astro.url);
+
+import { initI18n } from "@src/i18n";
+initI18n(locale);
 ---
 
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang={locale} dir={locale == "ar" ? "rtl" : "ltr"}>
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
@@ -28,7 +39,7 @@ const { title } = Astro.props.frontmatter || Astro.props;
   </head>
   <body class="w-screen min-h-screen overflow-x-hidden center">
     <Header />
-    <main class="flex-grow center">
+    <main class="flex-grow center w-full">
       <!-- <Backtotop /> -->
       <slot />
     </main>

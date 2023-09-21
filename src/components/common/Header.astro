@@ -1,6 +1,35 @@
 ---
-import IconButton from "./IconButton";
 import Container from "./Container";
 import Icon from "./Icon";
+import { useTranslation } from "react-i18next";
+import A from "./A";
+
+import { t } from "i18next";
+import LanguageChanger from "./LanguageChanger.astro";
 ---
 
+<Container>
+  <nav class="flex items-center justify-between p-3 mt-5 border" id="header">
+    <A href="/" className="border-0 hover:border-0">
+      <h1 class="text-xl font-bold md:text-2xl">
+        {t("components.header.title")}
+      </h1>
+    </A>
+    <div class="flex flex-row gap-3">
+      <div class="flex gap-3 md:hidden">
+        <A href="/projects">
+          <Icon className="w-5 md:w-8" src="/assets/projects-icon.svg" />
+        </A>
+        <A href="/contact">
+          <Icon className="w-5 md:w-8" src="/assets/contact-icon.svg" />
+        </A>
+      </div>
+      <div class="hidden gap-3 md:flex">
+        <A href="/">{t("components.header.menu.home")}</A>
+        <A href="/projects">{t("components.header.menu.projects")}</A>
+        <A href="/contact">{t("components.header.menu.contact")}</A>
+      </div>
+      <LanguageChanger />
+    </div>
+  </nav>
+</Container>

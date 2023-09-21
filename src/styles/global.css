@@ -17,6 +17,7 @@ Button {
   padding: 2rem;
 }
 
+
 nav div {
   margin: 0 !important;
 }
@@ -30,4 +31,8 @@ nav div {
 /* Making Footer Icons White */
 footer div img {
   filter: invert(100%) !important;
+}
+
+* {
+  font-family: "Neucha", "Tajawal", sans-serif !important;
 }
