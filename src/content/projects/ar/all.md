@@ -1,6 +1,6 @@
 ---
 title: كل مشاريعي
-description: All my diffrent projects on one page
+description: جميع مشاريعي المختلفة في صفحة واحدة.
 img: /assets/projects/all.jpg
 id: -1
 ---

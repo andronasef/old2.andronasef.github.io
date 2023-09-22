@@ -20,7 +20,7 @@
   "pages": {
     "homepage": {
       "title": "Andrew Nasef | WordPress Developer",
-      "description": "",
+      "description": "Andrew Nasef Freelance WordPress website developer and designer. I create beautiful and functional websites that meet your specific needs.",
       "components": {
         "hero": {
           "title": "A Dedicated Developer for your ",
@@ -32,21 +32,21 @@
           "title": "Why Choose Me?!",
           "reason1": {
             "title": "Predictable Pricing",
-            "description": "No surprises here! Choose a plan that works for you and pay the same amount every month.          "
+            "description": "Focus on your business, not your budget, with our transparent pricing."
           },
           "reason2": {
             "title": "Fast Turnaround",
-            "description": "Don't waste time searching for an agency or the right freelancer. Get work done in days, not in weeks."
+            "description": "Skip the hassle of agency and freelancer searching. Accomplish work in days, not weeks."
           },
           "reason3": {
             "title": "Dependable & Flexible",
-            "description": "No surprises here! Choose a plan that works for you and pay the same amount every month."
+            "description": "Every project receives my all, to be the best it can be."
           }
         },
         "howitworks": {
           "title": "How it works?",
           "step1": "Get in touch and share project specifics with me.",
-          "step2": "We'll collaborate to plan the project effectively.",
+          "step2": "We'll collaborate to plan your project effectively.",
           "step3": "Sit back as I bring your project to life seamlessly.",
           "button": "Let’s Work Together!"
         },
@@ -58,6 +58,8 @@
       }
     },
     "contact": {
+      "title" :"Contact Me",
+      "description": "Ready to see your projects come alive? Let's team up and turn your ideas into reality. Reach out now, and let's get started on crafting something remarkable together.",
       "components": {
         "profiles": {
           "my_name": "Andrew Nasef",
@@ -75,7 +77,8 @@
       }
     },
     "projects": {
-      "title": "My Projects"
+      "title": "My Projects",
+      "description": "All my Different Projects on one page."
     },
     "allProjects": {
       "title": "All Projects",
