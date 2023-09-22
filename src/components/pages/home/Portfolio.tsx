@@ -1,5 +1,5 @@
 import Button from "@components/common/Button";
-import ProjectsList from "@components/common/ProjectsList";
+import ProjectsList from "@components/common/ProjectsList.astro";
 import i18n from "@src/i18n";
 
 function Portfolio({ children }: { children: JSX.Element | JSX.Element[] }) {

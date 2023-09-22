@@ -9,6 +9,7 @@ import "papercss/dist/paper.min.css";
 import "../styles/global.css";
 import "@fontsource/tajawal";
 import "@fontsource/neucha";
+import { ViewTransitions } from "astro:transitions";
 
 interface Props {
   title: string;
@@ -36,10 +37,11 @@ initI18n(locale);
       type="text/javascript"
       src="https://unpkg.com/external-svg-loader@latest/svg-loader.min.js"
       async></script>
+    <ViewTransitions />
   </head>
   <body class="w-screen min-h-screen overflow-x-hidden center">
     <Header />
-    <main class="flex-grow center w-full">
+    <main class="flex-grow center w-full" transition:animate="slide">
       <!-- <Backtotop /> -->
       <slot />
     </main>

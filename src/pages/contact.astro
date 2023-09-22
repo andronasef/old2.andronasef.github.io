@@ -1,18 +1,17 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import SocialLinks from "../components/common/SocialLinks";
-import Container from "../components/common/Container";
-import ContactForm from "../components/pages/contact/ContactForm";
+import Layout from "@layouts/Layout.astro";
+import SocialLinks from "@components/common/SocialLinks";
+import Container from "@components/common/Container";
+import ContactForm from "@components/pages/contact/ContactForm";
 import { getLocale } from "astro-i18n-aut";
+import i18n from "@src/i18n";
 
 const locale = getLocale(Astro.url);
-
-import i18n from "@src/i18n";
 ---
 
-<Layout title="Contact Me">
+<Layout title={i18n.t("pages.contact.title")}>
   <Container className="py-10">
-    <div class="flex flex-col items-center gap-2">
+    <div class="center gap-2">
       <div class="w-40 h-40 mb-5">
         <img
           class="overflow-hidden border-2 rounded-full"
@@ -28,16 +27,17 @@ import i18n from "@src/i18n";
       </p>
       <SocialLinks />
     </div>
-    <div class="flex flex-col gap-2">
-      <div class="text-center ltr:md:text-left rtl:md:text-right">
+    <div class="center gap-2">
+      <div
+        class="text-center ltr:md:text-left rtl:md:text-right overflow-hidden"
+      >
         <p class="text-xl font-semibold md:text-2xl">
           {i18n.t("pages.contact.components.contact_form.title")}
         </p>
         <p>
           {i18n.t("pages.contact.components.contact_form.subtitle")}
         </p>
-      </div>
-      <div class="px-2 overflow-hidden">
+        <br />
         <ContactForm lang={locale} client:load />
       </div>
     </div>

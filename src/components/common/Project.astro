@@ -1,0 +1,32 @@
+---
+import Icon from "./Icon";
+import A from "./A";
+
+// create me props of [title, description, link, img]
+const { title, description, link, img } = Astro.props;
+---
+
+<div class="card">
+  <img
+    class="object-cover aspect-video"
+    src={img}
+    alt={title}
+    transition:name={img}
+  />
+  <div class="flex flex-row items-center justify-between card-body">
+    <div class="ltr:text-left rtl:text-right">
+      <h4 class="text-lg line-clamp-1" transition:name={title}>
+        {title}
+      </h4>
+      <p class="pr-2 text-xs md:text-base line-clamp-1">
+        {description}
+      </p>
+    </div>
+    <A className="bg-none min-w-fit p-1" href={link}>
+      <Icon
+        className="w-7 md:w-8 rtl:-scale-100"
+        src="/assets/go-to-project.svg"
+      />
+    </A>
+  </div>
+</div>

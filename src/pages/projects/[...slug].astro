@@ -35,9 +35,11 @@ const { Content } = await project.render();
 
 <Layout title={project.data.title}>
   <Container className="max-w-2xl">
-    <div class="flex flex-col gap-3 py-12 md:[&>img]:max-w-lg">
-      <h1 class="text-2xl font-bold">{project.data.title}</h1>
-      <img src={project.data.img} alt=" " />
+    <div class="flex flex-col gap-3 py-12 md:[&>img]:max-w-xl">
+      <h1 class="text-2xl font-bold" transition:name={project.data.title}>
+        {project.data.title}
+      </h1>
+      <img src={project.data.img} transition:name={project.data.img} />
       <div class="flex flex-col gap-4">
         <Content />
       </div>
@@ -49,5 +51,6 @@ const { Content } = await project.render();
 <style>
   img {
     max-width: 400px;
+    border-width: 1px !important;
   }
 </style>

@@ -1,0 +1,27 @@
+---
+import Project from "./Project.astro";
+
+const { projects } = Astro.props;
+---
+
+<div class="flex flex-col items-center justify-center gap-5 text-center">
+  <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+    {
+      projects.map((project: any) => {
+        const [lang, slug] = project.slug.split("/");
+
+        let link = `/projects/${slug}`;
+
+        return (
+          <Project
+            key={project.slug}
+            link={link}
+            description={project.data.description}
+            title={project.data.title}
+            img={project.data.img}
+          />
+        );
+      })
+    }
+  </div>
+</div>
