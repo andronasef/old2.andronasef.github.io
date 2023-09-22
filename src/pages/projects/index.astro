@@ -11,7 +11,8 @@ const lang = getLocale(Astro.url);
 const allProjects = await getAllProjects(lang);
 ---
 
-<Layout title={i18n.t("pages.projects.title")}>
+<Layout title={i18n.t("pages.projects.title")} 
+        description={i18n.t("pages.projects.description")} >
   <Container>
     <div class="py-12 gap-5 flex flex-col">
       <h2 class="text-3xl text-center">{i18n.t("pages.projects.title")}</h2>
