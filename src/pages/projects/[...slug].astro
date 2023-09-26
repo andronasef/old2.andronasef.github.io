@@ -5,6 +5,9 @@ import { defaultLocale, getLocale } from "astro-i18n-aut";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/common/Container";
 import CTA from "@components/common/CTA";
+
+type Props = CollectionEntry<"projects">;
+
 export async function getStaticPaths() {
   const projects = await getCollection("projects", (entry) =>
     entry.slug.startsWith(defaultLocale + "/"),
@@ -13,8 +16,6 @@ export async function getStaticPaths() {
     params: { slug: project.slug.replace(`${defaultLocale}/`, "") },
   }));
 }
-
-type Props = CollectionEntry<"projects">;
 
 const { slug } = Astro.params;
 const locale = getLocale(Astro.url) ?? defaultLocale;
@@ -30,10 +31,13 @@ if (!project) {
     statusText: "Not found",
   });
 }
+
+const projectGraphImg  =  new URL(project.data.img,Astro.site).toString();
+
 const { Content } = await project.render();
 ---
 
-<Layout title={project.data.title}>
+<Layout title={project.data.title} description={project.data.title} img={projectGraphImg}>
   <Container className="max-w-2xl">
     <div class="flex flex-col gap-3 py-12 md:[&>img]:max-w-xl">
       <h1 class="text-2xl font-bold" transition:name={project.data.title}>
