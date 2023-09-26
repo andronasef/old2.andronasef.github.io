@@ -3,11 +3,9 @@ import { twMerge } from "tailwind-merge";
 function Icon({
   src,
   className,
-  color,
 }: {
   src: string;
   className?: string;
-  color?: string;
 }) {
   return (
     <img

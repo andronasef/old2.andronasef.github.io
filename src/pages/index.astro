@@ -5,9 +5,7 @@ import HowItWorks from "@components/pages/home/HowItWorks";
 import ProjectsList from "@components/common/ProjectsList.astro";
 import WhyMe from "@components/pages/home/WhyMe";
 import Layout from "@layouts/Layout.astro";
-import Button from "@components/common/Button";
 import Container from "@components/common/Container";
-import LanguageChanger from "@components/common/LanguageChanger";
 import { getLatestFourProjects } from "@utils/project";
 
 const lang = getLocale(Astro.url);
@@ -18,7 +16,10 @@ import { getLocale } from "astro-i18n-aut";
 import Portfolio from "@components/pages/home/Portfolio";
 ---
 
-<Layout title={i18n.t("pages.homepage.title")}>
+<Layout
+  title={i18n.t("pages.homepage.title")}
+  description={i18n.t("pages.homepage.description")}
+>
   <Hero />
   <Container>
     <WhyMe />
