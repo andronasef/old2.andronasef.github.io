@@ -4,13 +4,13 @@ import Button from "../../common/Button";
 function HowItWorks() {
   const { t } = useTranslation();
   return (
-    <div className="grid items-center justify-center grid-cols-1 gap-5 text-left md:grid-cols-2 justify-items-center ">
+    <div className="grid items-center justify-center grid-cols-1 gap-5 text-start md:grid-cols-2 justify-items-center ">
       <img className="border-0 w-96" src="/assets/how-it-works.png" alt="" />
-      <div className="flex flex-col items-center gap-3 md:items-start">
+      <div className="flex flex-col items-center gap-3">
         <p className="text-2xl font-bold">
           {t("pages.homepage.components.howitworks.title")}
         </p>
-        <div className="flex flex-col gap-2 ">
+        <div className="flex flex-col gap-2">
           <Step
             number={1}
             title={t("pages.homepage.components.howitworks.step1")}

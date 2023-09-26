@@ -8,7 +8,7 @@ function CTA() {
       <div className="flex-col gap-5 center md:max-w-lg">
         <p className="text-2xl font-bold">{t("components.cta.title")}</p>
         <p>{t("components.cta.description")}</p>
-        <Button link="/contact" className="border-white">
+        <Button link="/contact" className="bg-white text-primary">
           {t("components.cta.button")}
         </Button>
       </div>

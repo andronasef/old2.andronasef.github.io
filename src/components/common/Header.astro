@@ -13,7 +13,8 @@ import { slide } from "astro:transitions";
   <nav class="flex items-center justify-between p-3 mt-5 border" id="header">
     <A href="/" className="border-0 hover:border-0">
       <h1 class="text-xl font-bold md:text-2xl">
-        {t("components.header.title")}
+        <span class="hidden md:flex"> {t("components.header.title")}</span>
+        <span class="flex md:hidden">AN</span>
       </h1>
     </A>
     <div class="flex flex-row gap-3">

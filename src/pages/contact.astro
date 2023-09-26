@@ -27,16 +27,16 @@ const locale = getLocale(Astro.url);
       </p>
       <SocialLinks />
     </div>
-    <div class="center gap-2">
-      <div
-        class="text-center ltr:md:text-left rtl:md:text-right overflow-hidden"
-      >
-        <p class="text-xl font-semibold md:text-2xl">
-          {i18n.t("pages.contact.components.contact_form.title")}
-        </p>
-        <p>
-          {i18n.t("pages.contact.components.contact_form.subtitle")}
-        </p>
+    <div class="center gap-2 overflow-hidden">
+      <div>
+        <div class="text-center md:!text-start">
+          <p class="text-xl font-semibold md:text-2xl">
+            {i18n.t("pages.contact.components.contact_form.title")}
+          </p>
+          <p>
+            {i18n.t("pages.contact.components.contact_form.subtitle")}
+          </p>
+        </div>
         <br />
         <ContactForm lang={locale} client:load />
       </div>

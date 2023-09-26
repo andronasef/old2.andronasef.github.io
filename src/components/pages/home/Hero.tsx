@@ -5,7 +5,7 @@ import Icon from "../../common/Icon";
 function Hero() {
   const { t } = useTranslation();
   return (
-    <div className="h-[calc(100dvh-70px)] w-screen flex relative flex-col justify-center items-center [&>img]:absolute [&>img]:border-0">
+    <div className="h-[calc(100vh-70px)] w-screen flex relative flex-col justify-center items-center [&>img]:absolute [&>img]:border-0">
       <div className="md:max-w-lg p-[15%] md:p-5 flex flex-col items-center justify-center gap-6 [&>*]:text-center mb-20">
         <p className="relative font-bold text-3xl md:text-4xl">
           {t("pages.homepage.components.hero.title")}
