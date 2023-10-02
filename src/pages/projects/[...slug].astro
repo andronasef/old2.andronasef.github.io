@@ -32,12 +32,16 @@ if (!project) {
   });
 }
 
-const projectGraphImg  =  new URL(project.data.img,Astro.site).toString();
+const projectGraphImg = new URL(project.data.img, Astro.site).toString();
 
 const { Content } = await project.render();
 ---
 
-<Layout title={project.data.title} description={project.data.title} img={projectGraphImg}>
+<Layout
+  title={project.data.title}
+  description={project.data.description}
+  img={projectGraphImg}
+>
   <Container className="max-w-2xl">
     <div class="flex flex-col gap-3 py-12 md:[&>img]:max-w-xl">
       <h1 class="text-2xl font-bold" transition:name={project.data.title}>
