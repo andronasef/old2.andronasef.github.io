@@ -52,11 +52,9 @@ const ContactForm = ({ lang }: { lang: string }) => {
           </div>
         );
       })}
-      <div className="flex col-span-2">
-        <button className="p-2 mt-2" type="submit">
+        <button className="p-2 mt-2 self-start" type="submit">
           {isArabic ? "هيا نعمل سويا!" : "Let's Work Together!"}
         </button>
-      </div>
     </form>
   );
 };

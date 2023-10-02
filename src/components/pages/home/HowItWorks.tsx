@@ -24,7 +24,7 @@ function HowItWorks() {
             title={t("pages.homepage.components.howitworks.step3")}
           />
         </div>
-        <Button link="/contact" style="self-start p-2">
+        <Button link="/contact" className="self-start p-2">
           {t("pages.homepage.components.howitworks.button")}
         </Button>
       </div>
