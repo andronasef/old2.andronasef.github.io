@@ -24,12 +24,16 @@ interface Props {
   frontmatter?: any;
 }
 
-const { title, description, img } = Astro.props.frontmatter || Astro.props;
+let { title, description, img } = Astro.props.frontmatter || Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 const webisteGraphImg = new URL(
   "/assets/website-graph.png",
   Astro.site,
 ).toString();
+
+// default values for SEO
+const image = img ? img : webisteGraphImg;
+description = description ? description : t("site.description");
 ---
 
 <!doctype html>
@@ -43,15 +47,24 @@ const webisteGraphImg = new URL(
 
     <SEO
       title={title}
-      description={description ? description : t("site.description")}
+      description={description}
       twitter={{
+        title,
+        image,
+        description,
+        card: "summary_large_image",
         creator: "@andronasef",
       }}
       openGraph={{
+        optional: {
+          description,
+          locale: locale == "ar" ? "ar_AR" : "en_US",
+          siteName: t("site.title"),
+        },
         basic: {
+          title,
+          image,
           url: canonicalURL,
-          title: title,
-          image: img ? img : webisteGraphImg,
           type: "website",
         },
       }}
