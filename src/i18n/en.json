@@ -58,7 +58,7 @@
       }
     },
     "contact": {
-      "title" :"Contact Me",
+      "title" : "Contact Me",
       "description": "Ready to see your projects come alive? Let's team up and turn your ideas into reality. Reach out now, and let's get started on crafting something remarkable together.",
       "components": {
         "profiles": {

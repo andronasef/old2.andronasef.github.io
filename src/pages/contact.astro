@@ -9,7 +9,10 @@ import i18n from "@src/i18n";
 const locale = getLocale(Astro.url);
 ---
 
-<Layout title={i18n.t("pages.contact.title")}>
+<Layout
+  title={i18n.t("pages.contact.title")}
+  description={i18n.t("pages.contact.description")}
+>
   <Container className="py-10">
     <div class="center gap-2">
       <div class="w-40 h-40 mb-5">
