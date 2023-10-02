@@ -5,6 +5,18 @@ img: /assets/projects/all.jpg
 id: -1
 ---
 
+## 🖥️ Wordpress Projects
+
+[Khalteleyal 👩‍🍼 - Child home care service Startup](https://khalteleyal.com/)
+
+[Dorshirt 👕 - Egyptian luxury clothing brand ECommerce](https://dorshirt.com/)
+
+[ServiceInKuwait 🔧 - The guide to all the best services in Kuwait](https://www.serviceinkuwait.com/)
+
+[Alhirfa 🧵 - Saudi Arabia store for hand crafts](https://alhirfa.sa/)
+
+[WanasCare 🧑‍⚕️ - Elderly Home care service website](https://wanascare.netlify.app)
+
 ## 💻 Frontend Projects
 
 [Googleit 🔍 - Google Search UI Clone](https://andronasef.github.io/googleit)
@@ -21,25 +33,13 @@ id: -1
 
 [HerosList 🦸 - Checklist list for Sunday school servants](https://andronasef.github.io/heroslist/)
 
-## 👨‍💻 Fullstack Projects
-
-[Shortener 🔗 - URL shortening Site](https://andronasef.github.io/shortener)
-
 ## 🙋 Open Source
 
-[Auto Translate 🇪🇬 - A javascript script to translate your website automatically](https://andronasef.github.io/autotranslate)
-
-[Iconify Flutter 🧳 - Providing icon sets for flutter framework](https://github.com/andronasef/iconify_flutter)
+[Iconify Flutter 🧳 - Providing all needed icons for every flutter developer](https://github.com/andronasef/iconify_flutter)
 
 ## 🛠️ Useful Tools
 
 [Notion Icons 📦 - +100k icons just for your notion pages](https://www.producthunt.com/products/notion-icons-2)
-
-## 🖥️ Wordpress Design Projects
-
-[khalteleyal 👩‍🍼 - Child homecare service website](https://khalteleyal.com/)
-
-[WanasCare 🧑‍⚕️ - Eldry Home care service website](https://wanascare.netlify.app)
 
 ## 📱 Mobile Apps
 
@@ -47,13 +47,10 @@ id: -1
 
 [Tarneemna 🎶 - Easy way to download Arabic Worships](https://github.com/andronasef/tarneemna-app)
 
-## 🚀 For Fun
-
-[Product Hunt Twitter Bot 🐦 - Get the best ⭐️ from ProductHunt 🕵 in Twitter](https://github.com/andronasef/producthuntbot)
-
-[Is This Even Real? 🤥 - You are the detective in this game = You must detect fake images](https://andronasef.github.io/is-this-even-real-game)
-
 <style >
+  a {
+    background-image: none
+  }
   h2 {
     margin-top: 1.5rem;
     font-size: 1.5rem !important;

@@ -5,55 +5,53 @@ img: /assets/projects/all.jpg
 id: -1
 ---
 
-## 💻 مشاريع Frontend
+## 🖥️ مشاريع ووردبريس
 
-[Googleit 🔍 - Google Search UI Clone](https://andronasef.github.io/googleit)
+[خالة العيال 👩‍🍼 - شركة ناشئة متخصصة في رعاية الاطفال](https://khalteleyal.com/)
 
-[My Portfolio 💼 - My personal website](https://andronasef.github.io)
+[Dorshirt 👕 - متجر لبراند ملابس مصرية فاخرة](https://dorshirt.com/)
 
-[Flutter Awesome Tips 💡 - Tips and Tricks for Flutter Developers](https://andronasef.github.io/flutter-awesome-tips/)
+[خدمات الكويت 🔧 - الدليل الشامل لافضل الخدمات في الكويت](https://www.serviceinkuwait.com/)
 
-[PublicApis ☁️ - UI for Public Apis Github Repo](https://andronasef.github.io/publicapis/)
+[الحرفة 🧵 - متجر سعودي رائد للحرف اليدوية](https://alhirfa.sa/)
 
-[EGNews 📰 - Discover the latest trending news in Egypt](https://andronasef.github.io/egnews)
+[ونس 🧑‍⚕️ - شركة ناشئة في مجال الرعاية الصحية لكبار السن](https://wanascare.netlify.app)
 
-[Sleep Calculator 💤 - Discover best time to wake up](https://andronasef.github.io/sleepcalculator/)
+## 💻 مشاريع واجهة امامية
 
-[HerosList 🦸 - Checklist list for Sunday school servants](https://andronasef.github.io/heroslist/)
+[Googleit 🔍 - تقليد لواجهة موقع جوجل](https://andronasef.github.io/googleit)
 
-## 👨‍💻 Fullstack Projects
+[My Portfolio 💼 - موقعي الشخصي (الذي تقوم بزيارته الان)](https://andronasef.github.io)
 
-[Shortener 🔗 - URL shortening Site](https://andronasef.github.io/shortener)
+[Flutter Awesome Tips 💡 - مجموعة نصائح لمبرمجين Flutter](https://andronasef.github.io/flutter-awesome-tips/)
 
-## 🙋 Open Source
+[PublicApis ☁️ - واجهه بسيطة ل PublicApis](https://andronasef.github.io/publicapis/)
 
-[Auto Translate 🇪🇬 - A javascript script to translate your website automatically](https://andronasef.github.io/autotranslate)
+[EGNews 📰 - موقع لعرض اخر الاخبار المصرية](https://andronasef.github.io/egnews)
 
-[Iconify Flutter 🧳 - Providing icon sets for flutter framework](https://github.com/andronasef/iconify_flutter)
+[Sleep Calculator 💤 - اداه لاكتشاف افضل وقت للنوم](https://andronasef.github.io/sleepcalculator/)
 
-## 🛠️ Useful Tools
+[HerosList 🦸 - لائحة تقييم لدروس خدام مدارس الاحد](https://andronasef.github.io/heroslist/)
 
-[Notion Icons 📦 - +100k icons just for your notion pages](https://www.producthunt.com/products/notion-icons-2)
+## 🙋 مشاريع مفتوحة المصدر
 
-## 🖥️ Wordpress Design Projects
+[Iconify Flutter 🧳 - مشروع لتوفير جميع ال Icons التي يحتاجها اي Flutter Developer](https://github.com/andronasef/iconify_flutter)
 
-[khalteleyal 👩‍🍼 - Child homecare service website](https://khalteleyal.com/)
+## 🛠️ أداوات مفيدة
 
-[WanasCare 🧑‍⚕️ - Eldry Home care service website](https://wanascare.netlify.app)
+[Notion Icons 📦 - اكثر من مئة الف ايقونه لاستخدمها في صفحات نوشن](https://www.producthunt.com/products/notion-icons-2)
 
-## 📱 Mobile Apps
+## 📱 تطبيقات للهاتف
 
-[My Soundboard 🎶 - Free custom sounboard maker mobile app](https://github.com/andronasef/mysoundboard-app)
+[My Soundboard 🎶 - تطبيق مجاني لصنع لوحات المفاتيح المخصصة للأصوات](https://github.com/andronasef/mysoundboard-app)
 
-[Tarneemna 🎶 - Easy way to download Arabic Worships](https://github.com/andronasef/tarneemna-app)
-
-## 🚀 For Fun
-
-[Product Hunt Twitter Bot 🐦 - Get the best ⭐️ from ProductHunt 🕵 in Twitter](https://github.com/andronasef/producthuntbot)
-
-[Is This Even Real? 🤥 - You are the detective in this game = You must detect fake images](https://andronasef.github.io/is-this-even-real-game)
+[ترانيمنا 🎶 - تطبيق لتحميل الترانيم العربية](https://github.com/andronasef/tarneemna-app)
 
 <style >
+  a {
+    background-image: none
+  }
+
   h2 {
     margin-top: 1.5rem;
     font-size: 1.5rem !important;
