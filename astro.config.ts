@@ -11,11 +11,9 @@ const locales = {
 };
 
 export default defineConfig({
-  // 1. Update site to your GitHub Pages URL
-  site: "https://andronasef.github.io",
-  
-  // 2. Add the repository name as the base path
-  base: "/old2.andronasef.github.io",
+site: "https://andronasef.github.io",
+  // Remove or comment out the base path
+  // base: "/old2.andronasef.github.io",
   
   trailingSlash: "always",
   build: {
