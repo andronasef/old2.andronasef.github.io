@@ -10,9 +10,13 @@ const locales = {
   ar: "ar",
 };
 
-// https://astro.build/config
 export default defineConfig({
-  site: "https://annatools.me",
+  // 1. Update site to your GitHub Pages URL
+  site: "https://andronasef.github.io",
+  
+  // 2. Add the repository name as the base path
+  base: "/old2.andronasef.github.io",
+  
   trailingSlash: "always",
   build: {
     format: "directory",
