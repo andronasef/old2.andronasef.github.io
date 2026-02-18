@@ -32,7 +32,7 @@ jobs:
           node-version: 20 # Updated to LTS Node 20
 
       - name: Install dependencies
-        run: npm ci # 'npm ci' is faster and more reliable for CI environments
+        run: npm install # 'npm ci' is faster and more reliable for CI environments
 
       - name: Build
         run: npm run build
