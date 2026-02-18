@@ -13,7 +13,7 @@ const locales = {
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://andronasef.dev",
+  site: "https://annatools.me",
   trailingSlash: "always",
   build: {
     format: "directory",
@@ -35,7 +35,7 @@ export default defineConfig({
       },
       filter: filterSitemapByDefaultLocale({
         defaultLocale,
-        base: "https://andronasef.dev",
+        base: "https://annatools.me",
       }),
     }),
   ],
