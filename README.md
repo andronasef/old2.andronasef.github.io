@@ -7,7 +7,7 @@ A modern, multilingual portfolio website built with Astro, React, and Tailwind C
 - **Multilingual Support**: Available in English and Arabic using `astro-i18n-aut`
 - **Modern Tech Stack**: Built with Astro 3.x, React 18, and Tailwind CSS
 - **Responsive Design**: Mobile-first design that works on all devices
-- **SEO Optimized**: Includes sitemap generation and SEO metadata
+- **SEO Optimized**: Includes SEO metadata for better search engine visibility
 - **MDX Support**: Write content in Markdown with React components
 - **Contact Form**: Integrated Google Forms for easy client communication
 - **Portfolio Showcase**: Dynamic project listing and detail pages
@@ -95,9 +95,8 @@ You can manually trigger a deployment from the GitHub Actions tab.
 ### Changing the Domain
 
 If you need to change the deployment domain:
-1. Update the `CNAME` file with your domain
-2. Update `site` in `astro.config.ts`
-3. Update the sitemap base URL in `astro.config.ts`
+1. Update the `CNAME` file in the `public/` directory with your domain
+2. Update `site` in `astro.config.ts` to match your domain
 
 ## 🔧 Technologies Used
 
